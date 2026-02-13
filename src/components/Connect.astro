@@ -15,16 +15,16 @@ const iconPaths: Record<SocialLink['icon'], string> = {
   goodreads: 'M4 19.5A2.5 2.5 0 016.5 17H20V7H6.5A2.5 2.5 0 004 9.5v10zM6.5 5H20v2H6.5A2.5 2.5 0 004 9.5v1A2.5 2.5 0 006.5 5z',
 };
 ---
-<section id="connect" class="py-16 md:py-24 bg-white/50 scroll-mt-20 animate-fade-in opacity-0" style="animation-delay: 0.4s">
+<section id="connect" class="py-16 md:py-24 bg-surface scroll-mt-20 opacity-0 animate-fade-in-soft" style="animation-delay: 0.45s">
   <div class="max-w-content mx-auto px-6">
-    <h2 class="font-display text-2xl md:text-3xl font-semibold text-navy mb-8">Connect</h2>
-    <p class="text-charcoal/80 text-lg max-w-prose mb-10">
+    <h2 class="font-display text-2xl md:text-3xl font-semibold text-paper mb-8">Connect</h2>
+    <p class="text-paper/80 text-lg max-w-prose mb-10">
       Find me on social media, subscribe to my newsletter, or say hello.
     </p>
     <ul class="flex flex-wrap gap-4">
       {socialLinks.map((item) => (
         <li>
-          <a href={item.href} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-4 py-3 rounded-lg border border-charcoal/20 text-charcoal hover:border-accent hover:text-accent transition-colors">
+          <a href={item.href} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-4 py-3 rounded-lg border border-white/10 text-paper hover:border-accent/50 hover:text-accent transition-all duration-350 hover:scale-[1.02] active:scale-[0.98]">
             <svg class="w-5 h-5 shrink-0 text-current" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path d={iconPaths[item.icon]} />
             </svg>

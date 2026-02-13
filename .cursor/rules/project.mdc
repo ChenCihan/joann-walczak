@@ -10,7 +10,7 @@ Personal one-page static site for author Jo Ann Walczak. Audience: readers; goal
 ## Stack
 
 - **Astro 4** — static site generator; no SSR, no React/Vue.
-- **Tailwind CSS** — styling only; use theme tokens from `tailwind.config.mjs` (cream, charcoal, navy, accent, font-display, font-body, max-w-prose, max-w-content).
+- **Tailwind CSS** — styling only; use theme tokens from `tailwind.config.mjs` (ink, surface, paper, muted, accent, font-display, font-body, max-w-prose, max-w-content).
 - **Minimal JS** — only where needed (e.g. smooth scroll); prefer HTML/CSS.
 
 ## Structure
@@ -23,6 +23,6 @@ Personal one-page static site for author Jo Ann Walczak. Audience: readers; goal
 ## Conventions
 
 - Keep the site static and fast; no backend or CMS.
-- Preserve the warm, literary design: cream background, readable typography, accent for links/CTAs.
+- Preserve the dark, elegant theme: ink background, paper text, surface for sections, accent (gold) for links/CTAs.
 - When adding content (bio, books, blog URL, social links), edit the relevant component; add short comments for placeholders.
 - Use semantic HTML and accessible patterns (e.g. `aria-label` on nav, alt on images).

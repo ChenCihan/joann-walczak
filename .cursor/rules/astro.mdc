@@ -14,7 +14,7 @@ alwaysApply: false
 
 ## Styling
 
-- Use Tailwind utility classes only. Custom theme: `font-display`, `font-body`, `text-navy`, `text-charcoal`, `bg-cream`, `text-accent`, `hover:text-accent`, `max-w-prose`, `max-w-content`.
+- Use Tailwind utility classes only. Custom theme: `font-display`, `font-body`, `bg-ink`, `bg-surface`, `text-paper`, `text-muted`, `text-accent`, `hover:text-accent`, `max-w-prose`, `max-w-content`.
 - Avoid inline styles except for one-off overrides (e.g. animation-delay).
 - Responsive: use `sm:`, `md:`, `lg:` breakpoints; keep mobile-first.
 
