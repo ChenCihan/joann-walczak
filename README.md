@@ -19,9 +19,14 @@ npm run preview
 ## Where to change content
 
 - **Bio** — [`src/components/About.astro`](src/components/About.astro).
-- **Books** — [`src/components/Books.astro`](src/components/Books.astro). Add or edit entries; set `coverUrl` to an image in `public/` (e.g. `/walk-on-layton-cover.jpg`) to replace the placeholder cover.
+- **Books** — [`src/components/Books.astro`](src/components/Books.astro). Add or edit entries; set `coverUrl` to an image in `public/` (e.g. `/walk-on-layton-cover.jpg`) if you prefer a local book cover.
 - **Blog** — [`src/components/Blog.astro`](src/components/Blog.astro) (`blogUrl`).
 - **Connect** — [`src/components/Connect.astro`](src/components/Connect.astro) (`socialLinks`).
+
+## Images
+
+- **Book cover** — Uses Amazon’s cover image; if it doesn’t load (e.g. hotlink block), the site falls back to `public/placeholder-book.svg`. To use your own file, set `coverUrl` in `Books.astro` to e.g. `/walk-on-layton-cover.jpg` and add that file to `public/`.
+- **Author photo** — The About section uses a photo from The Times-Tribune (Jan 2025). To use your own image, set `authorPhotoUrl` in `About.astro` to a path in `public/` (e.g. `/joann-walczak.jpg`) and add the file.
 
 ## Deploy
 

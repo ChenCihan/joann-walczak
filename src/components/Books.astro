@@ -11,7 +11,7 @@ const books: Book[] = [
   {
     title: 'The Walk on Layton: 52 Modern Parables for Your Journey',
     description: 'A nonfiction collection of 52 short stories about life, family, and experiences in the United States and China. Named after Layton Road where Jo Ann lives, each story ends with encouragement for your Walk—reflecting the book\'s theme of how we choose to live our lives. Designed to read one story per week over the course of a year. Released December 2024.',
-    coverUrl: '/placeholder-book.svg',
+    coverUrl: 'https://m.media-amazon.com/images/P/B0DPTL67J2._SY445_SX342_ML2_.jpg',
     linkUrl: 'https://www.amazon.com/Walk-Layton-Modern-Parables-Journey/dp/B0DPTL67J2',
     linkLabel: 'Get it on Amazon',
   },
@@ -23,7 +23,7 @@ const books: Book[] = [
     {books.map((book) => (
       <div class="flex flex-col sm:flex-row gap-8 sm:gap-10 p-6 sm:p-8 rounded-xl border border-white/5 hover:border-white/10 hover:bg-white/[0.02] transition-all duration-350">
         <a href={book.linkUrl} target="_blank" rel="noopener noreferrer" class="shrink-0 w-40 h-[13rem] sm:w-44 sm:h-64 rounded-lg overflow-hidden bg-white/5 border border-white/10 shadow-lg hover:shadow-xl hover:border-accent/30 transition-all duration-350 mx-auto sm:mx-0">
-          <img src={book.coverUrl} alt={`Cover: ${book.title}`} class="w-full h-full object-cover transition-transform duration-350 hover:scale-[1.02]" width="176" height="256" />
+          <img src={book.coverUrl} alt={`Cover: ${book.title}`} class="w-full h-full object-cover transition-transform duration-350 hover:scale-[1.02]" width="176" height="256" onerror="this.onerror=null;this.src='/placeholder-book.svg'" />
         </a>
         <div class="flex flex-col min-w-0 flex-1 max-w-prose">
           <h3 class="font-display text-xl sm:text-2xl font-semibold text-paper">{book.title}</h3>

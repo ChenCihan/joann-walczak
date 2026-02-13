@@ -1,11 +1,27 @@
 ---
 const bio = `Jo Ann Walczak is a writer and former English teacher from Scott Township, Pennsylvania. She taught at Lakeland High School and later spent a year in China as the first fluent English teacher at a public high school of over 3,000 students. She returned to China six times over six years to serve at an orphanage. Her writing is rooted in faith and the idea of "the Walk"—how we choose to live our lives. She keeps a blog, "On Layton: The View from My Front Porch," named after the road she lives on in Northeastern Pennsylvania. As she says: "If you live with your eyes wide open, you will find that the world is rich in stories."`;
+const authorPhotoUrl = 'https://www.thetimes-tribune.com/wp-content/uploads/2025/01/SAV-L-WALCZAK-0123.jpg';
 ---
 <section id="about" class="py-16 md:py-24 scroll-mt-20 opacity-0 animate-fade-in-soft" style="animation-delay: 0.15s">
-  <div class="max-w-prose mx-auto px-6">
-    <h2 class="font-display text-2xl md:text-3xl font-semibold text-paper mb-6">About</h2>
-    <p class="text-paper/90 text-lg leading-relaxed">
-      {bio}
-    </p>
+  <div class="max-w-content mx-auto px-6">
+    <h2 class="font-display text-2xl md:text-3xl font-semibold text-paper mb-10">About</h2>
+    <div class="flex flex-col md:flex-row gap-10 md:gap-12 items-start">
+      <figure class="shrink-0 w-full md:w-72">
+        <img
+          src={authorPhotoUrl}
+          alt="Jo Ann Walczak, author of The Walk on Layton"
+          class="w-full aspect-[3/4] object-cover rounded-xl border border-white/10 shadow-lg"
+          width="288"
+          height="384"
+          loading="lazy"
+        />
+        <figcaption class="sr-only">Jo Ann Walczak</figcaption>
+      </figure>
+      <div class="min-w-0 flex-1 max-w-prose">
+        <p class="text-paper/90 text-lg leading-relaxed">
+          {bio}
+        </p>
+      </div>
+    </div>
   </div>
 </section>
