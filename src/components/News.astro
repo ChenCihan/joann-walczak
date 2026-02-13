@@ -1,0 +1,33 @@
+---
+const newsItem = {
+  title: "Sharing her stories: Scott Twp. author's book aims to inspire others on their 'Walk' through life",
+  source: 'The Times-Tribune / Valley Advantage',
+  url: 'https://www.thetimes-tribune.com/2025/01/23/sharing-her-stories-scott-twp-authors-book-aims-to-inspire-others-on-their-walk-through-life/',
+  date: 'January 2025',
+};
+---
+<section id="news" class="section-texture py-10 md:py-14 bg-surface scroll-mt-20 opacity-0 animate-fade-in-soft relative" style="animation-delay: 0.4s">
+  <div class="absolute top-0 right-6 md:right-12 w-24 h-px bg-gradient-to-l from-sage/40 to-transparent" aria-hidden="true" />
+  <div class="max-w-content mx-auto px-6">
+    <h2 class="font-display text-2xl font-semibold text-paper mb-2">News</h2>
+    <div class="w-12 h-0.5 bg-gradient-to-r from-sage/70 to-accent/50 rounded-full mb-5" aria-hidden="true" />
+    <a
+      href={newsItem.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="block p-3 rounded-lg border border-white/5 hover:border-white/10 hover:bg-white/[0.02] transition-all duration-350 group"
+    >
+      <span class="font-display text-paper group-hover:text-accent transition-colors duration-350 text-base md:text-lg">
+        {newsItem.title}
+      </span>
+      <span class="block mt-0.5 text-sm text-muted">
+        {newsItem.source}
+        {newsItem.date ? ` · ${newsItem.date}` : ''}
+      </span>
+      <span class="inline-flex items-center mt-1.5 text-sm text-accent" aria-hidden="true">
+        Read article
+        <span class="ml-1">→</span>
+      </span>
+    </a>
+  </div>
+</section>
