@@ -1,0 +1,42 @@
+/* Parallax: hero background scrolls slower than content */
+.hero-parallax__bg {
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+}
+/* Desktop: lower "camera" — anchor to bottom of image so lawn is in frame, not sky */
+@media (min-width: 769px) {
+  .hero-parallax__bg {
+    background-position: center bottom;
+  }
+}
+@media (max-width: 768px), (prefers-reduced-motion: reduce) {
+  .hero-parallax__bg {
+    background-attachment: scroll;
+  }
+}
+
+/* Subtle grain texture overlay (lawn/garden vibe) */
+.hero-texture {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
+
+/* Section texture: very subtle paper/grain */
+.section-texture {
+  position: relative;
+}
+.section-texture::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  z-index: 0;
+}
+.section-texture > * {
+  position: relative;
+  z-index: 1;
+}
