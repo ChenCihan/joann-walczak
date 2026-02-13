@@ -40,3 +40,61 @@
   position: relative;
   z-index: 1;
 }
+
+/* --- Dusk ambient glows (subtle, slow, scroll-parallax) --- */
+.dusk-glows {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.dusk-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur( clamp(60px, 12vw, 100px) );
+  will-change: transform;
+  mix-blend-mode: soft-light;
+}
+.dusk-glow--1 {
+  width: 55vmax; height: 55vmax;
+  top: -15%; right: -10%;
+  background: radial-gradient( circle, rgba(180, 115, 55, 0.22) 0%, rgba(140, 85, 45, 0.08) 45%, transparent 70% );
+  animation: dusk-glow-pulse 12s ease-in-out infinite;
+}
+.dusk-glow--2 {
+  width: 45vmax; height: 45vmax;
+  bottom: -10%; left: -5%;
+  background: radial-gradient( circle, rgba(160, 100, 60, 0.18) 0%, transparent 65% );
+  animation: dusk-glow-pulse 14s ease-in-out infinite 1.5s;
+}
+.dusk-glow--3 {
+  width: 38vmax; height: 38vmax;
+  top: 35%; left: 20%;
+  background: radial-gradient( circle, rgba(120, 80, 90, 0.12) 0%, transparent 60% );
+  animation: dusk-glow-pulse 16s ease-in-out infinite 0.5s;
+}
+.dusk-glow--4 {
+  width: 50vmax; height: 50vmax;
+  bottom: 20%; right: 15%;
+  background: radial-gradient( circle, rgba(200, 140, 80, 0.14) 0%, transparent 65% );
+  animation: dusk-glow-pulse 10s ease-in-out infinite 2s;
+}
+.dusk-glow--5 {
+  width: 42vmax; height: 42vmax;
+  top: 60%; right: -8%;
+  background: radial-gradient( circle, rgba(90, 70, 85, 0.1) 0%, transparent 60% );
+  animation: dusk-glow-pulse 13s ease-in-out infinite 3s;
+}
+
+@keyframes dusk-glow-pulse {
+  0%, 100% { opacity: 0.75; }
+  50% { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dusk-glow {
+    animation: none;
+  }
+}
