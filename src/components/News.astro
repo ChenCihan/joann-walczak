@@ -5,12 +5,14 @@ const newsItem = {
   url: 'https://www.thetimes-tribune.com/2025/01/23/sharing-her-stories-scott-twp-authors-book-aims-to-inspire-others-on-their-walk-through-life/',
   date: 'January 2025',
 };
+const newsIntro = 'A bit of press about the book and the Walk.';
 ---
 <section id="news" class="section-texture py-10 md:py-14 bg-surface scroll-mt-20 opacity-0 animate-fade-in-soft relative" style="animation-delay: 0.4s">
   <div class="absolute top-0 right-6 md:right-12 w-24 h-px bg-gradient-to-l from-sage/40 to-transparent" aria-hidden="true" />
   <div class="max-w-content mx-auto px-6">
     <h2 class="font-display text-2xl font-semibold text-paper mb-2">News</h2>
     <div class="w-12 h-0.5 bg-gradient-to-r from-sage/70 to-accent/50 rounded-full mb-5" aria-hidden="true" />
+    <p class="text-paper/80 text-sm mb-4">{newsIntro}</p>
     <a
       href={newsItem.url}
       target="_blank"
