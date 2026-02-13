@@ -17,9 +17,11 @@ const books: Book[] = [
   },
 ];
 ---
-<section id="books" class="py-16 md:py-24 bg-surface scroll-mt-20 opacity-0 animate-fade-in-soft" style="animation-delay: 0.25s">
+<section id="books" class="section-texture py-16 md:py-24 bg-surface scroll-mt-20 opacity-0 animate-fade-in-soft relative" style="animation-delay: 0.25s">
+  <div class="absolute top-0 right-6 md:right-12 w-24 h-px bg-gradient-to-l from-sage/40 to-transparent" aria-hidden="true" />
   <div class="max-w-content mx-auto px-6">
-    <h2 class="font-display text-2xl md:text-3xl font-semibold text-paper mb-10">Books</h2>
+    <h2 class="font-display text-2xl md:text-3xl font-semibold text-paper mb-3">Books</h2>
+    <div class="w-12 h-0.5 bg-gradient-to-r from-sage/70 to-accent/50 rounded-full mb-10" aria-hidden="true" />
     {books.map((book) => (
       <div class="flex flex-col sm:flex-row gap-8 sm:gap-10 p-6 sm:p-8 rounded-xl border border-white/5 hover:border-white/10 hover:bg-white/[0.02] transition-all duration-350">
         <a href={book.linkUrl} target="_blank" rel="noopener noreferrer" class="shrink-0 w-40 h-[13rem] sm:w-44 sm:h-64 rounded-lg overflow-hidden bg-white/5 border border-white/10 shadow-lg hover:shadow-xl hover:border-accent/30 transition-all duration-350 mx-auto sm:mx-0">

@@ -1,13 +1,15 @@
 ---
 const blogUrl = 'https://joannjoneswalczak.blogspot.com/';
 ---
-<section id="blog" class="py-16 md:py-24 scroll-mt-20 opacity-0 animate-fade-in-soft" style="animation-delay: 0.35s">
-  <div class="max-w-prose mx-auto px-6 text-center">
-    <h2 class="font-display text-2xl md:text-3xl font-semibold text-paper mb-4">Blog</h2>
+<section id="blog" class="section-texture py-16 md:py-24 scroll-mt-20 opacity-0 animate-fade-in-soft relative" style="animation-delay: 0.35s">
+  <div class="max-w-prose mx-auto px-6 text-center relative">
+    <span class="absolute top-8 left-1/2 -translate-x-1/2 text-sage/20 font-display text-6xl select-none" aria-hidden="true">“</span>
+    <h2 class="font-display text-2xl md:text-3xl font-semibold text-paper mb-3">Blog</h2>
+    <div class="w-12 h-0.5 bg-gradient-to-r from-sage/70 to-accent/50 rounded-full mx-auto mb-8" aria-hidden="true" />
     <p class="text-paper/80 text-lg mb-8">
       On Layton: The View from My Front Porch—stories, reflections, and conversations from the blog that led to the book.
     </p>
-    <a href={blogUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 bg-accent text-ink font-medium rounded-lg hover:bg-accent-hover transition-all duration-350 shadow-lg hover:shadow-xl active:scale-[0.98]">
+    <a href={blogUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 bg-accent text-ink font-medium rounded-lg hover:bg-accent-hover transition-all duration-350 shadow-lg hover:shadow-xl active:scale-[0.98] ring-2 ring-accent/20 ring-offset-2 ring-offset-ink">
       Read the blog
       <span class="ml-2" aria-hidden="true">→</span>
     </a>

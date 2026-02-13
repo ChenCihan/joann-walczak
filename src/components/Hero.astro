@@ -1,9 +1,18 @@
 ---
+// Lush lawn / garden — parallax: background fixed so it scrolls slower than content (Unsplash)
+const heroBgUrl = 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1920&q=85';
 ---
-<section class="relative overflow-hidden">
-  <div class="absolute inset-0 bg-gradient-to-b from-accent/5 via-transparent to-transparent" aria-hidden="true" />
-  <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(201,169,98,0.1),transparent)]" aria-hidden="true" />
-  <div class="relative max-w-content mx-auto px-6 py-24 md:py-32 text-center">
+<section class="hero-parallax relative overflow-hidden min-h-[48vh] flex flex-col justify-center">
+  <div
+    class="hero-parallax__bg absolute inset-0 bg-cover bg-center bg-no-repeat"
+    style={`background-image: url(${heroBgUrl});`}
+    aria-hidden="true"
+  />
+  <div class="absolute inset-0 bg-ink/65" aria-hidden="true" />
+  <div class="absolute inset-0 bg-gradient-to-b from-ink/35 via-transparent to-ink/75" aria-hidden="true" />
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_40%,rgba(45,61,44,0.25),transparent)]" aria-hidden="true" />
+  <div class="absolute inset-0 hero-texture" aria-hidden="true" />
+  <div class="relative max-w-content mx-auto px-6 py-16 md:py-20 text-center z-10">
     <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-paper tracking-tight opacity-0 animate-hero-name">
       Jo Ann Walczak
     </h1>
