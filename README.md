@@ -18,12 +18,10 @@ npm run preview
 
 ## Where to change content
 
-- **Bio** — Edit the `bio` string in [`src/components/About.astro`](src/components/About.astro).
-- **Books** — Edit the `books` array in [`src/components/Books.astro`](src/components/Books.astro). Replace placeholder titles, descriptions, `coverUrl` (use images in `public/` or full URLs), and `linkUrl` for each book.
-- **Blog** — Set the real blog URL in the `blogUrl` constant in [`src/components/Blog.astro`](src/components/Blog.astro).
-- **Social / Connect** — Update the `socialLinks` array in [`src/components/Connect.astro`](src/components/Connect.astro) with real labels and URLs (Twitter/X, Instagram, Goodreads, newsletter, etc.).
-
-Placeholder book cover images use `public/placeholder-book.svg`. Replace with real cover art in `public/` and point `coverUrl` to them (e.g. `/my-book-cover.jpg`).
+- **Bio** — [`src/components/About.astro`](src/components/About.astro).
+- **Books** — [`src/components/Books.astro`](src/components/Books.astro). Add or edit entries; set `coverUrl` to an image in `public/` (e.g. `/walk-on-layton-cover.jpg`) to replace the placeholder cover.
+- **Blog** — [`src/components/Blog.astro`](src/components/Blog.astro) (`blogUrl`).
+- **Connect** — [`src/components/Connect.astro`](src/components/Connect.astro) (`socialLinks`).
 
 ## Deploy
 
