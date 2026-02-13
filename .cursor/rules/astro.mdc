@@ -1,0 +1,29 @@
+---
+description: Astro and Tailwind patterns for this project
+globs: "**/*.astro"
+alwaysApply: false
+---
+
+# Astro & Tailwind Conventions
+
+## Components
+
+- Use Astro components (`.astro`); no framework components unless explicitly needed.
+- Frontmatter: imports first, then props/constants, then template.
+- Prefer single-file components; keep logic minimal (data in frontmatter or a small inline array).
+
+## Styling
+
+- Use Tailwind utility classes only. Custom theme: `font-display`, `font-body`, `text-navy`, `text-charcoal`, `bg-cream`, `text-accent`, `hover:text-accent`, `max-w-prose`, `max-w-content`.
+- Avoid inline styles except for one-off overrides (e.g. animation-delay).
+- Responsive: use `sm:`, `md:`, `lg:` breakpoints; keep mobile-first.
+
+## Links and assets
+
+- Internal anchors: `href="#section-id"` with matching `id` and `scroll-mt-*` for sticky header.
+- External links: `target="_blank"` and `rel="noopener noreferrer"`.
+- Images in `public/`: use paths like `/placeholder-book.svg`; provide `alt` and optional `width`/`height`.
+
+## Scripts
+
+- Use `<script>` in `.astro` only when necessary (e.g. smooth scroll). Prefer no JS for layout/UI.

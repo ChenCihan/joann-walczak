@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Books from '../components/Books.astro';
+import Blog from '../components/Blog.astro';
+import Connect from '../components/Connect.astro';
+import Footer from '../components/Footer.astro';
+---
+<Layout>
+  <Header />
+  <main>
+    <Hero />
+    <About />
+    <Books />
+    <Blog />
+    <Connect />
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', function (e) {
+      const href = (this as HTMLAnchorElement).getAttribute('href');
+      if (href === '#') return;
+      e.preventDefault();
+      const target = document.querySelector(href);
+      target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+</script>

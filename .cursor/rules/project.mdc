@@ -1,0 +1,28 @@
+---
+description: Project context and conventions for Jo Ann Walczak writer site
+alwaysApply: true
+---
+
+# Jo Ann Walczak — Writer Website
+
+Personal one-page static site for author Jo Ann Walczak. Audience: readers; goal: introduce the author and link to books, blog, and social.
+
+## Stack
+
+- **Astro 4** — static site generator; no SSR, no React/Vue.
+- **Tailwind CSS** — styling only; use theme tokens from `tailwind.config.mjs` (cream, charcoal, navy, accent, font-display, font-body, max-w-prose, max-w-content).
+- **Minimal JS** — only where needed (e.g. smooth scroll); prefer HTML/CSS.
+
+## Structure
+
+- `src/pages/index.astro` — single page; composes layout + section components.
+- `src/layouts/Layout.astro` — shell, meta, fonts.
+- `src/components/` — Header, Hero, About, Books, Blog, Connect, Footer. One concern per component.
+- `public/` — static assets (favicon, images); reference by path e.g. `/image.jpg`.
+
+## Conventions
+
+- Keep the site static and fast; no backend or CMS.
+- Preserve the warm, literary design: cream background, readable typography, accent for links/CTAs.
+- When adding content (bio, books, blog URL, social links), edit the relevant component; add short comments for placeholders.
+- Use semantic HTML and accessible patterns (e.g. `aria-label` on nav, alt on images).

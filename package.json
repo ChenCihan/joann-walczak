@@ -1,0 +1,16 @@
+{
+  "name": "joann-walczak",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "npx astro dev",
+    "start": "npx astro dev",
+    "build": "npx astro build",
+    "preview": "npx astro preview"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^6.0.2",
+    "astro": "^5.17.2",
+    "tailwindcss": "^3.4.0"
+  }
+}
